@@ -9,7 +9,7 @@ set -euo pipefail;
 echo "Bundling toolchain version: $TOOLCHAIN_VERSION";
 
 LINUX_OUTPUT_ROOT=/toolchain/linux-output-root
-GCC_VERSION="12.3";
+GCC_VERSION="15.2";
 ARCH="$(uname -m)";
 
 LINUX_OUTPUT_ROOT_BASE_DIR="$(dirname "$LINUX_OUTPUT_ROOT")";
@@ -38,4 +38,4 @@ function upload_bundle() {
 
 prepare_dir;
 make_bundle;
-upload_bundle;
+# upload_bundle;

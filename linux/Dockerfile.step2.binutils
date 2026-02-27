@@ -7,7 +7,7 @@ WORKDIR /toolchain/src
 
 RUN . /toolchain/src/buildvars.sh \
 echo "[#] unpack sources" \
-    && tar -xvf /toolchain/src/archives/arm-gnu-toolchain-src-snapshot-12.3.rel1.tar.xz -C /toolchain/src/src/ \
+    && tar -xvf /toolchain/src/archives/arm-gnu-toolchain-src-snapshot-15.2.rel1.tar.xz -C /toolchain/src/src/ \
     && rm -rf /toolchain/src/src/ncurses/* \
     && tar --strip-component=1 -xvf /toolchain/src/archives/ncurses-6.2.tar.gz -C /toolchain/src/src/ncurses \
 && echo "[#] build binutils" \

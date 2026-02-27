@@ -26,7 +26,7 @@ function build_gcc_first_arm64() {
         LDFLAGS="$MAC_ARM64_FLAGS" \
         DYLD_LIBRARY_PATH="$MAC_ARM64_OUTPUT_ROOT/lib" \
         PATH="$MAC_ARM64_OUTPUT_ROOT/bin:$PATH" \
-        /toolchain/src/src/arm-gnu-toolchain-src-snapshot-12.3.rel1/configure \
+        /toolchain/src/src/arm-gnu-toolchain-src-snapshot-15.2.rel1/configure \
             "--disable-libssp" \
             "--with-gnu-as" \
             "--with-gnu-ld" \

@@ -16,23 +16,23 @@ STRIP="strip";
 
 X86_64_LIBS=( \
 	$(find "$MAC_X86_64_OUTPUT_ROOT/arm-none-eabi/lib" -name \*.a -or -name \*.o) \
-	$(find "$MAC_X86_64_OUTPUT_ROOT/lib/gcc/arm-none-eabi/12.3.1" -name \*.a -or -name \*.o)
+	$(find "$MAC_X86_64_OUTPUT_ROOT/lib/gcc/arm-none-eabi/15.2.1" -name \*.a -or -name \*.o)
 );
 ARM64_LIBS=( \
 	$(find "$MAC_ARM64_OUTPUT_ROOT/arm-none-eabi/lib" -name \*.a -or -name \*.o) \
-	$(find "$MAC_ARM64_OUTPUT_ROOT/lib/gcc/arm-none-eabi/12.3.1" -name \*.a -or -name \*.o)
+	$(find "$MAC_ARM64_OUTPUT_ROOT/lib/gcc/arm-none-eabi/15.2.1" -name \*.a -or -name \*.o)
 );
 X86_64_BINNARIES=( \
 	$(find "$MAC_X86_64_OUTPUT_ROOT/bin" -name arm-none-eabi-\*) \
 	$(find "$MAC_X86_64_OUTPUT_ROOT/arm-none-eabi/bin/" -maxdepth 1 -mindepth 1 -name \*) \
 	$(find "$MAC_X86_64_OUTPUT_ROOT/libexec/gcc/arm-none-eabi") \
-	$(find "$MAC_X86_64_OUTPUT_ROOT/lib/gcc/arm-none-eabi/12.3.1/" -maxdepth 1 -name \* -perm +111 -and ! -type d)
+	$(find "$MAC_X86_64_OUTPUT_ROOT/lib/gcc/arm-none-eabi/15.2.1/" -maxdepth 1 -name \* -perm +111 -and ! -type d)
 );
 ARM64_BINNARIES=( \
 	$(find "$MAC_ARM64_OUTPUT_ROOT/bin" -name arm-none-eabi-\*) \
 	$(find "$MAC_ARM64_OUTPUT_ROOT/arm-none-eabi/bin/" -maxdepth 1 -mindepth 1 -name \*) \
 	$(find "$MAC_ARM64_OUTPUT_ROOT/libexec/gcc/arm-none-eabi") \
-	$(find "$MAC_ARM64_OUTPUT_ROOT/lib/gcc/arm-none-eabi/12.3.1/" -maxdepth 1 -name \* -perm +111 -and ! -type d)
+	$(find "$MAC_ARM64_OUTPUT_ROOT/lib/gcc/arm-none-eabi/15.2.1/" -maxdepth 1 -name \* -perm +111 -and ! -type d)
 );
 
 

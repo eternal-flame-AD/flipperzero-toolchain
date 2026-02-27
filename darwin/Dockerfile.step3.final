@@ -17,7 +17,7 @@ COPY --from=flipperzero-toolchain-mac-tools /toolchain/mac-arm64-output-root /to
 ADD requirements.txt /toolchain/
 ADD scripts/strip.sh /usr/bin/
 ADD scripts/relink.sh /usr/bin/
-ADD scripts/bundle_upload.sh /usr/bin/
+ADD scripts/bundle.sh /usr/bin/
 ADD scripts/fix_python_scripts_shebang.sh /usr/bin/
 
 RUN /bin/zsh -c "/toolchain/mac-x86_64-output-root/bin/python3 -m pip install --upgrade pip \

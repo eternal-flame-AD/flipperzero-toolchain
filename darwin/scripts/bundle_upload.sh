@@ -10,7 +10,7 @@ echo "Bundling toolchain version: $TOOLCHAIN_VERSION";
 
 MAC_X86_64_OUTPUT_ROOT=/toolchain/mac-x86_64-output-root
 MAC_ARM64_OUTPUT_ROOT=/toolchain/mac-arm64-output-root
-GCC_VERSION="12.3";
+GCC_VERSION="15.2";
 
 MAC_X86_64_OUTPUT_ROOT_BASE_DIR="$(dirname "$MAC_X86_64_OUTPUT_ROOT")";
 MAC_X86_64_TOOLCHAIN_DIR_NAME="gcc-arm-none-eabi-$GCC_VERSION-x86_64-darwin-flipper";

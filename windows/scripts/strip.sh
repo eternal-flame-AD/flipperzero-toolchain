@@ -14,13 +14,13 @@ STRIP="x86_64-w64-mingw32-strip";
 
 LIBS=( \
 	$(find "$WINDOWS_OUTPUT_ROOT/arm-none-eabi/lib" -name \*.a -or -name \*.o) \
-	$(find "$WINDOWS_OUTPUT_ROOT/lib/gcc/arm-none-eabi/12.3.1" -name \*.a -or -name \*.o)
+	$(find "$WINDOWS_OUTPUT_ROOT/lib/gcc/arm-none-eabi/15.2.1" -name \*.a -or -name \*.o)
 );
 BINNARIES=( \
 	$(find "$WINDOWS_OUTPUT_ROOT/bin" -name arm-none-eabi-\*.exe) \
 	$(find "$WINDOWS_OUTPUT_ROOT/arm-none-eabi/bin/" -maxdepth 1 -mindepth 1 -name \*.exe) \
 	$(find "$WINDOWS_OUTPUT_ROOT/libexec/gcc/arm-none-eabi") \
-	$(find "$WINDOWS_OUTPUT_ROOT/lib/gcc/arm-none-eabi/12.3.1/" -maxdepth 1 -name \*.exe -perm /111 -and ! -type d)
+	$(find "$WINDOWS_OUTPUT_ROOT/lib/gcc/arm-none-eabi/15.2.1/" -maxdepth 1 -name \*.exe -perm /111 -and ! -type d)
 );
 
 find "$WINDOWS_OUTPUT_ROOT" -name '*.la' -delete;

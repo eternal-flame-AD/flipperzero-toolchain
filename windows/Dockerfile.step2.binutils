@@ -5,7 +5,7 @@ FROM flipperzero-toolchain-windows-build-base AS flipperzero-toolchain-windows-b
 
 RUN . /toolchain/src/buildvars.sh \
 echo "[#] unpack sources" \
-    && cmd tar -xf arm-gnu-toolchain-src-snapshot-12.3.rel1.tar.xz -C /toolchain/src/src/ \
+    && cmd tar -xf arm-gnu-toolchain-src-snapshot-15.2.rel1.tar.xz -C /toolchain/src/src/ \
 && echo "[#] build binutils" \
     && cmd /toolchain/src/build-windows-binutils.sh \
 && echo "[#] cleanup..." \

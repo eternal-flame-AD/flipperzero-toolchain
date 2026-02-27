@@ -9,7 +9,7 @@ set -euo pipefail;
 echo "Bundling toolchain version: $TOOLCHAIN_VERSION";
 
 WINDOWS_OUTPUT_ROOT=/toolchain/windows-output-root
-GCC_VERSION="12.3";
+GCC_VERSION="15.2";
 ARCH="x86_64";
 
 WINDOWS_OUTPUT_ROOT_BASE_DIR="$(dirname "$WINDOWS_OUTPUT_ROOT")";

@@ -163,7 +163,7 @@ function build_linux_gcc() {
     rm -rf "$LINUX_CONFIGURE_ROOT/gcc";
     mkdir -p "$LINUX_CONFIGURE_ROOT/gcc";
     pushd "$LINUX_CONFIGURE_ROOT/gcc";
-    LDFLAGS="-L$LINUX_BUILD_ROOT/lib -L$LINUX_OUTPUT_ROOT/lib" CPPFLAGS="-I$LINUX_BUILD_ROOT/include -I$LINUX_OUTPUT_ROOT/include -I$LINUX_OUTPUT_ROOT/include/readline" LD_LIBRARY_PATH="LINUX_OUTPUT_ROOT/lib" "/toolchain/src/src/arm-gnu-toolchain-src-snapshot-12.3.rel1/configure" \
+    LDFLAGS="-L$LINUX_BUILD_ROOT/lib -L$LINUX_OUTPUT_ROOT/lib" CPPFLAGS="-I$LINUX_BUILD_ROOT/include -I$LINUX_OUTPUT_ROOT/include -I$LINUX_OUTPUT_ROOT/include/readline" LD_LIBRARY_PATH="LINUX_OUTPUT_ROOT/lib" "/toolchain/src/src/arm-gnu-toolchain-src-snapshot-15.2.rel1/configure" \
         "--prefix=$LINUX_OUTPUT_ROOT" \
         --target=arm-none-eabi \
         "--disable-libssp" \
@@ -196,7 +196,7 @@ function build_linux_gcc_nano() {
     rm -rf "$LINUX_CONFIGURE_ROOT/gcc-nano";
     mkdir -p "$LINUX_CONFIGURE_ROOT/gcc-nano";
     pushd "$LINUX_CONFIGURE_ROOT/gcc-nano";
-    LDFLAGS="-L$LINUX_BUILD_ROOT/lib -L$LINUX_OUTPUT_ROOT/lib" CPPFLAGS="-I$LINUX_BUILD_ROOT/include -I$LINUX_OUTPUT_ROOT/include -I$LINUX_OUTPUT_ROOT/include/readline" LD_LIBRARY_PATH="LINUX_OUTPUT_ROOT/lib" "/toolchain/src/src/arm-gnu-toolchain-src-snapshot-12.3.rel1/configure" \
+    LDFLAGS="-L$LINUX_BUILD_ROOT/lib -L$LINUX_OUTPUT_ROOT/lib" CPPFLAGS="-I$LINUX_BUILD_ROOT/include -I$LINUX_OUTPUT_ROOT/include -I$LINUX_OUTPUT_ROOT/include/readline" LD_LIBRARY_PATH="LINUX_OUTPUT_ROOT/lib" "/toolchain/src/src/arm-gnu-toolchain-src-snapshot-15.2.rel1/configure" \
         "--prefix=$NEWLIB_NANO_ROOT" \
         "--with-sysroot=$NEWLIB_NANO_ROOT/arm-none-eabi" \
         --target=arm-none-eabi \

@@ -38,9 +38,9 @@ RUN case ${TARGETPLATFORM} in \
     && rsync -azv /tmp/cmake-3.28.0-linux-${ARCH}/ /usr \
     && rm cmake-3.28.0-linux-${ARCH}.tar.gz \
 && echo "[#] from src && deps" \
-    && wget -q "https://developer.arm.com/-/media/Files/downloads/gnu/12.3.rel1/srcrel/arm-gnu-toolchain-src-snapshot-12.3.rel1.tar.xz" \
+    && wget -q "https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/srcrel/arm-gnu-toolchain-src-snapshot-15.2.rel1.tar.xz" \
     && wget -q "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz" \
-    && tar -xvf arm-gnu-toolchain-src-snapshot-12.3.rel1.tar.xz -C /toolchain/src/src/ \
+    && tar -xvf arm-gnu-toolchain-src-snapshot-15.2.rel1.tar.xz -C /toolchain/src/src/ \
     && rm -rf /toolchain/src/src/ncurses/* \
     && tar --strip-component=1 -xvf ncurses-6.2.tar.gz -C /toolchain/src/src/ncurses \
     && ln -s /toolchain/src/relink.sh /usr/local/bin/relink.sh \

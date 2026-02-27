@@ -34,17 +34,17 @@ RUN case ${TARGETPLATFORM} in \
     && echo "ARCH_TARGET=${ARCH}" >> /toolchain/src/buildvars.sh \
     && . /toolchain/src/buildvars.sh \
     && cmd mkdir -p "/toolchain/src/src/" \
-    && cmd wget -q https://github.com/xpack-dev-tools/mingw-w64-gcc-xpack/releases/download/v12.3.0-1/xpack-mingw-w64-gcc-12.3.0-1-linux-x64.tar.gz \
-    && cmd wget -q https://developer.arm.com/-/media/Files/downloads/gnu/12.3.rel1/srcrel/arm-gnu-toolchain-src-snapshot-12.3.rel1.tar.xz \
+    && cmd wget -q https://github.com/xpack-dev-tools/mingw-w64-gcc-xpack/releases/download/v15.2.0-1/xpack-mingw-w64-gcc-15.2.0-1-linux-x64.tar.gz \
+    && cmd wget -q https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/srcrel/arm-gnu-toolchain-src-snapshot-15.2.rel1.tar.xz \
     && wget -q "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz" \
 && echo "[#] install cmake..." \
     && wget -q "https://github.com/Kitware/CMake/releases/download/v3.28.0/cmake-3.28.0-linux-${ARCH}.tar.gz" \
     && tar -xvf cmake-3.28.0-linux-${ARCH}.tar.gz -C /tmp \
     && rsync -azv /tmp/cmake-3.28.0-linux-${ARCH}/ /usr \
     && rm cmake-3.28.0-linux-${ARCH}.tar.gz \
-    && cmd tar --strip-component=1 -xf xpack-mingw-w64-gcc-12.3.0-1-linux-x64.tar.gz -C /usr/ \
-    && cmd rm -rf xpack-mingw-w64-gcc-12.3.0-1-linux-x64.tar.gz \
-    && cmd tar -xf arm-gnu-toolchain-src-snapshot-12.3.rel1.tar.xz -C /toolchain/src/src/ \
+    && cmd tar --strip-component=1 -xf xpack-mingw-w64-gcc-15.2.0-1-linux-x64.tar.gz -C /usr/ \
+    && cmd rm -rf xpack-mingw-w64-gcc-15.2.0-1-linux-x64.tar.gz \
+    && cmd tar -xf arm-gnu-toolchain-src-snapshot-15.2.rel1.tar.xz -C /toolchain/src/src/ \
     && rm -rf /toolchain/src/src/ncurses/* \
     && tar --strip-component=1 -xvf ncurses-6.2.tar.gz -C /toolchain/src/src/ncurses \
     && ln -s /toolchain/src/relink.sh /usr/local/bin/relink.sh \

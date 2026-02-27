@@ -154,7 +154,7 @@ function build_linux_gcc() {
     rm -rf "$WINDOWS_CONFIGURE_ROOT/gcc";
     mkdir -p "$WINDOWS_CONFIGURE_ROOT/gcc";
     pushd "$WINDOWS_CONFIGURE_ROOT/gcc";
-    LDFLAGS="-L$WINDOWS_BUILD_ROOT/lib -L$WINDOWS_OUTPUT_ROOT/lib" CPPFLAGS="-I$WINDOWS_BUILD_ROOT/include -I$WINDOWS_OUTPUT_ROOT/include -I$WINDOWS_OUTPUT_ROOT/include/readline" "/toolchain/src/src/arm-gnu-toolchain-src-snapshot-12.3.rel1/configure" \
+    LDFLAGS="-L$WINDOWS_BUILD_ROOT/lib -L$WINDOWS_OUTPUT_ROOT/lib" CPPFLAGS="-I$WINDOWS_BUILD_ROOT/include -I$WINDOWS_OUTPUT_ROOT/include -I$WINDOWS_OUTPUT_ROOT/include/readline" "/toolchain/src/src/arm-gnu-toolchain-src-snapshot-15.2.rel1/configure" \
         "--prefix=$WINDOWS_OUTPUT_ROOT" \
         --target=arm-none-eabi \
         --host=x86_64-w64-mingw32 \
@@ -213,7 +213,7 @@ function build_linux_gcc_nano() {
     rm -rf "$WINDOWS_CONFIGURE_ROOT/gcc-nano";
     mkdir -p "$WINDOWS_CONFIGURE_ROOT/gcc-nano";
     pushd "$WINDOWS_CONFIGURE_ROOT/gcc-nano";
-    LDFLAGS="-L$WINDOWS_BUILD_ROOT/lib -L$WINDOWS_OUTPUT_ROOT/lib" CPPFLAGS="-I$WINDOWS_BUILD_ROOT/include -I$WINDOWS_OUTPUT_ROOT/include -I$WINDOWS_OUTPUT_ROOT/include/readline" "/toolchain/src/src/arm-gnu-toolchain-src-snapshot-12.3.rel1/configure" \
+    LDFLAGS="-L$WINDOWS_BUILD_ROOT/lib -L$WINDOWS_OUTPUT_ROOT/lib" CPPFLAGS="-I$WINDOWS_BUILD_ROOT/include -I$WINDOWS_OUTPUT_ROOT/include -I$WINDOWS_OUTPUT_ROOT/include/readline" "/toolchain/src/src/arm-gnu-toolchain-src-snapshot-15.2.rel1/configure" \
         "--prefix=$NEWLIB_NANO_ROOT" \
         "--with-sysroot=$NEWLIB_NANO_ROOT/arm-none-eabi" \
         --target=arm-none-eabi \

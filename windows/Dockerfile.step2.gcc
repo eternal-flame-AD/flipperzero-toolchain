@@ -11,10 +11,10 @@ ADD patch/DEFINE-WIN32_LEAN_AND_MEAN.patch /toolchain/src/
 RUN . /toolchain/src/buildvars.sh \
     && cmd wget -q "https://developer.arm.com/-/media/Files/downloads/gnu/12.2.rel1/binrel/arm-gnu-toolchain-12.2.rel1-${ARCH_TARGET}-arm-none-eabi.tar.xz" \
 && echo "[#] unpack sources" \
-    && cmd tar -xf /toolchain/src/archives/arm-gnu-toolchain-src-snapshot-12.3.rel1.tar.xz -C /toolchain/src/src/ \
+    && cmd tar -xf /toolchain/src/archives/arm-gnu-toolchain-src-snapshot-15.2.rel1.tar.xz -C /toolchain/src/src/ \
     && cmd rm -rf /toolchain/src/src/ncurses/* \
     && cmd tar --strip-component=1 -xf /toolchain/src/archives/ncurses-6.2.tar.gz -C /toolchain/src/src/ncurses \
-    && cd /toolchain/src/src/arm-gnu-toolchain-src-snapshot-12.3.rel1 \
+    && cd /toolchain/src/src/arm-gnu-toolchain-src-snapshot-15.2.rel1 \
     && git apply /toolchain/src/DEFINE-WIN32_LEAN_AND_MEAN.patch \
     && cd /toolchain/src/archives/ \
     && cmd tar -xf arm-gnu-toolchain-12.2.rel1-${ARCH_TARGET}-arm-none-eabi.tar.xz -C /toolchain/src/src/ \

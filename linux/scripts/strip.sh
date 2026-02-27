@@ -10,13 +10,13 @@ STRIP="strip";
 
 LIBS=( \
 	$(find "$LINUX_OUTPUT_ROOT/arm-none-eabi/lib" -name \*.a -or -name \*.o) \
-	$(find "$LINUX_OUTPUT_ROOT/lib/gcc/arm-none-eabi/12.3.1" -name \*.a -or -name \*.o)
+	$(find "$LINUX_OUTPUT_ROOT/lib/gcc/arm-none-eabi/15.2.1" -name \*.a -or -name \*.o)
 );
 BINNARIES=( \
 	$(find "$LINUX_OUTPUT_ROOT/bin" -name arm-none-eabi-\*) \
 	$(find "$LINUX_OUTPUT_ROOT/arm-none-eabi/bin/" -maxdepth 1 -mindepth 1 -name \*) \
 	$(find "$LINUX_OUTPUT_ROOT/libexec/gcc/arm-none-eabi") \
-	$(find "$LINUX_OUTPUT_ROOT/lib/gcc/arm-none-eabi/12.3.1/" -maxdepth 1 -name \* -perm /111 -and ! -type d)
+	$(find "$LINUX_OUTPUT_ROOT/lib/gcc/arm-none-eabi/15.2.1/" -maxdepth 1 -name \* -perm /111 -and ! -type d)
 );
 
 find "$LINUX_OUTPUT_ROOT" -name '*.la' -delete;
